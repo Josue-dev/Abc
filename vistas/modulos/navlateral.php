@@ -41,44 +41,45 @@
 					<i class="zmdi zmdi-case zmdi-hc-fw"></i> Administración <i class="zmdi zmdi-caret-down pull-right"></i>
 				</a>
 				<ul class="list-unstyled full-box">
+					<?php 
+						if($_SESSION['privilegio_sbp'] == 1){
+					?>
 					<li>
-						<a href="<?php echo SERVERURL; ?>agent/"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Agentes</a>
+						<a href="<?php echo SERVERURL; ?>contenedor/"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Contenedores</a>
 					</li>
 					<li>
-						<a href="<?php echo SERVERURL; ?>retinue/"><i class="zmdi zmdi-accounts-outline zmdi-hc-fw"></i> Comitivas</a>
+						<a href="<?php echo SERVERURL; ?>producto/"><i class="zmdi zmdi-accounts-outline zmdi-hc-fw"></i> Productos</a>
 					</li>
 					<li>
-						<a href="<?php echo SERVERURL; ?>event/"><i class="zmdi zmdi-watch zmdi-hc-fw"></i> Eventos</a>
+						<a href="<?php echo SERVERURL; ?>proveedor/"><i class="zmdi zmdi-accounts-outline zmdi-hc-fw"></i> Proveedores</a>
 					</li>
 					<li>
-						<a href="<?php echo SERVERURL; ?>confidencetest/"><i class="zmdi zmdi-alert-triangle zmdi-hc-fw"></i> Pruebas de Confianza</a>
+						<a href="<?php echo SERVERURL; ?>catalogo/"><i class="zmdi zmdi-accounts-outline zmdi-hc-fw"></i> Catalogo de productos</a>
 					</li>
-					<li>
-						<a href="<?php echo SERVERURL; ?>book/"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Cursos</a>
-					</li>
-					<li>
-						<a href="<?php echo SERVERURL; ?>book/"><i class="zmdi zmdi-run zmdi-hc-fw"></i> Habilidades</a>
-					</li>
-					<li>
-						<a href="<?php echo SERVERURL; ?>book/"><i class="zmdi zmdi-tablet-android zmdi-hc-fw"></i> Equipo</a>
-					</li>
+					<?php 
+						}
+					?>
+				
 				</ul>
 			</li>
 			<li>
 				<a href="#!" class="btn-sideBar-SubMenu">
-					<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Usuarios <i class="zmdi zmdi-caret-down pull-right"></i>
+					<i class="zmdi zmdi-case zmdi-hc-fw"></i>Crear Usuario<i class="zmdi zmdi-caret-down pull-right"></i>
 				</a>
 				<ul class="list-unstyled full-box">
+					<?php 
+						if($_SESSION['privilegio_sbp'] == 1){
+					?>
 					<li>
-						<a href="<?php echo SERVERURL; ?>admin/"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+						<a href="<?php echo SERVERURL; ?>admin/"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i>crear cuenta</a>
 					</li>
+					<?php 
+						}
+					?>
+				
 				</ul>
 			</li>
-			<li>
-				<a href="<?php echo SERVERURL; ?>catalog/">
-					<i class="zmdi zmdi-download zmdi-hc-fw"></i> Backup y Restauración
-				</a>
-			</li>
+			
 		</ul>
 	</div>
 </section>

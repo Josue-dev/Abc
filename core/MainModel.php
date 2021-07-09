@@ -143,6 +143,34 @@
 						});
 					</script>
 				";
+			}elseif ($datos['Alerta'] == "limpiar_redirect") {
+				$pagina = $datos['Pagina'];
+				$alerta = "
+					<script>
+						swal({
+						  title: '".$datos['Titulo']."',
+						  text: '".$pagina."',
+						  type: '".$datos['Tipo']."',
+						  confirmButtonText: 'Aceptar'
+						}).then(function() {
+						window.location('".$pagina."');
+						});
+					</script>
+				";
+			}elseif ($datos['Alerta'] == "recargardiv") {
+				$alerta = "
+					<script>
+						swal({
+						  title: '".$datos['Titulo']."',
+						  text: '".$datos['Texto']."',
+						  type: '".$datos['Tipo']."',
+						  confirmButtonText: 'Aceptar'
+						}).then(function() {
+							$('.FormularioAjax')[0].reset();
+						});
+						
+					</script>
+				";
 			}
 			return $alerta;
 		}

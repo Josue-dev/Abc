@@ -4,13 +4,6 @@
 	if (isset($_POST['tipoFormulario'])) {
 
 		switch ($_POST['tipoFormulario']) {
-			case 'newAgent':
-				if (isset($_POST['dpi-reg']) && isset($_POST['nombre-reg'])) {
-					require_once "../controladores/AgenteControlador.php";
-				$insAgente=new AgenteControlador();
-				echo $insAgente->agregarAgenteControlador();
-				}
-				break;
 			case 'newAdmin':
 				require_once "../controladores/AdministradorControlador.php";
 				$insAdmin=new AdministradorControlador();
@@ -26,25 +19,25 @@
 					echo $delAdmin->eliminarAdministradorControlador();
 				}
 				break;
-			case 'upAgent':
-				if (isset($_POST['dpi-reg']) && isset($_POST['nombre-reg'])) {
-					require_once "../controladores/AgenteControlador.php";
-				$insAgente=new AgenteControlador();
-				echo $insAgente->editarAgenteControlador();
+			case 'newProducto':
+				if (isset($_POST['nombre-reg'])) {
+					require_once "../controladores/ProductosControlador.php";
+					$agregar = new ProductosControlador();
+					echo $agregar->agregarProductoControlador();
 				}
 				break;
-			case 'deleteAgent':
-				if (isset($_POST['codigo-del']) && isset($_POST['privilegio-admin'])) {
-					require_once "../controladores/AgenteControlador.php";
-				$delAgente=new AgenteControlador();
-				echo $delAgente->eliminarAgenteControlador();
+			case 'newContenedor':
+				if (isset($_POST['nombre-reg'])) {
+					require_once "../controladores/ContenedorControlador.php";
+					$agregar = new ContenedorControlador();
+					echo $agregar->agregarContenedorControlador();
 				}
 				break;
-			case 'newretinue':
-				if (isset($_POST['comitiva-reg']) && isset($_POST['nombre-reg'])) {
-					require_once "../controladores/ComitivaControlador.php";
-				$agregarComitiva=new ComitivaControlador();
-				echo $agregarComitiva->agregarComitivaControlador();
+			case 'newProveedor':
+				if (isset($_POST['nombre-reg'])) {
+					require_once "../controladores/ProveedorControlador.php";
+					$agregar = new ProveedorControlador();
+					echo $agregar->agregarProveedorControlador();
 				}
 				break;
 			default:

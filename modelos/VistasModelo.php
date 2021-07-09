@@ -5,7 +5,7 @@
 		if ($vistas =="index" || $vistas == "login") {
 			$contenido = "login";
 		}else{
-			$listaBlanca=["adminlist","adminsearch", "admin", "home", "agentficha", "event", "catalog", "retinue", "retinuelist","agenttimeline", "eventlist", "clientsearch", "agent", "agentlist", "agentsearch", "agentedit", "myaccount", "mydata", "confidencetest", "confidencetestlist","confidencetestsearch" ,"search" ];
+			$listaBlanca=[ "admin", "home","agenttimeline", "myaccount", "mydata", "catalogo", "producto","contenedor", "proveedor", "productoList"];
 		if (in_array($vistas, $listaBlanca)) {
 			if (is_file("./vistas/contenidos/".$vistas."-view.php")) {
 				$contenido = "./vistas/contenidos/".$vistas."-view.php";

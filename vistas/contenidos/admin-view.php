@@ -11,16 +11,6 @@
 	  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ADMINISTRADOR
 	  		</a>
 	  	</li>
-	  	<li>
-	  		<a href="<?php echo SERVERURL ?>adminlist/" class="btn btn-success">
-	  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES
-	  		</a>
-	  	</li>
-	  	<li>
-	  		<a href="<?php echo SERVERURL ?>adminsearch/" class="btn btn-primary">
-	  			<i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ADMINISTRADOR
-	  		</a>
-	  	</li>
 	</ul>
 </div>
 
@@ -174,7 +164,7 @@
     <div class="container">
         <div class="col">
             <p class="lead text-center">
-                Copyright &copy; Dirección General de Inteligencia Civil
+                Copyright &copy; Todos los derechos reservados Advin josue vasquez
             </p>
         </div>
     </div>

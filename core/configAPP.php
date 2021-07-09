@@ -1,8 +1,8 @@
 <?php
-	const SERVER ="192.168.0.29";
+	const SERVER ="localhost";
 	const DB="seguridad";
-	const USER="rescobar";
-	const PASS="rescobar123";
+	const USER="root";
+	const PASS="";
 
 	const SGBD="mysql:host=".SERVER.";dbname=".DB;
 
